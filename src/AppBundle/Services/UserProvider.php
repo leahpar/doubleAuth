@@ -23,7 +23,7 @@ class UserProvider implements UserProviderInterface
 
     public function supportsClass($class)
     {
-        return $class === 'DoubleAuth\AppBundle\Entity/User';
+        return $class === 'DoubleAuth\AppBundle\Entity\User';
     }
 
 }
