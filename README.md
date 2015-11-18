@@ -1,4 +1,5 @@
 doubleAuth
 ==========
 
-A Symfony project created on November 18, 2015, 2:28 pm.
+A simple Symfony project as an exercise to test double password authentication
+
