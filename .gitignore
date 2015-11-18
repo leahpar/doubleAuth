@@ -1,0 +1,45 @@
+# Symfony2
+/web/bundles/
+/app/bootstrap.php.cache
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/build/
+/vendor/
+/bin/
+/composer.phar
+
+# cache & logs
+/app/cache/*
+/app/logs/*
+
+# parametres
+/app/config/parameters.yml
+
+# Data
+/web/media/
+/web/css/
+/web/js/
+
+# Fichiers poubelle
+*~
+*.swp
+*.swo
+.DS_Store/
+Thumbs.db
+Desktop.ini
+
+# Eclipse
+.buildpath
+.project
+.settings/
+!/web/js/en.min.js
+!/web/js/jquery.bs_pagination.min.js
+!/web/css/jquery.bs_pagination.css
+
+# SublimeText
+wetruck.sublime-project
+wetruck.sublime-workspace
+
+# phpStorm
+.idea/
+
