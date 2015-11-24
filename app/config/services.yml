@@ -2,17 +2,23 @@
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
 #    parameter_name: value
+#    security.authentication.provider.dao.class: AppBundle\Security\MyDaoAuthenticationProvider
+
 
 services:
 
-    user_provider:
-        class: AppBundle\Services\UserProvider
+#    user_provider:
+#        class: AppBundle\Services\UserProvider
 
-    security.authentication.provider:
-        class: AppBundle\Security\AuthProvider
-        arguments:
-            - user_provider # user provider
+    double_password_authenticator:
+        class:     AppBundle\Security\DoublePasswordAuthenticator
+        arguments: ["@security.password_encoder"]
 
-    security.authentication.listener:
-        class: AppBundle\Security\AuthListener
-        arguments: ["@security.token_storage", "@security.authentication.manager"]
+#    security.authentication.provider:
+#        class: AppBundle\Security\AuthProvider
+#        arguments:
+#            - user_provider # user provider
+#
+#    security.authentication.listener:
+#        class: AppBundle\Security\AuthListener
+#        arguments: ["@security.token_storage", "@security.authentication.manager"]

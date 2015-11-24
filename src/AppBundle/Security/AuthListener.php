@@ -47,8 +47,8 @@ class AuthListener implements ListenerInterface
         }
 
         // By default deny authorization
-        $response = new Response();
-        $response->setStatusCode(Response::HTTP_FORBIDDEN);
-        $event->setResponse($response);
+//        $response = new Response();
+//        $response->setStatusCode(Response::HTTP_FORBIDDEN);
+//        $event->setResponse($response);
     }
 }

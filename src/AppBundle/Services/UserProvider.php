@@ -11,8 +11,7 @@ class UserProvider implements UserProviderInterface
 {
     public function loadUserByUsername($username)
     {
-        $user = new User($username, 'toto', 'toto', null, array('ROLE_USER'));
-        dump("UserProvider", $user);
+        $user = new User($username, 'toto1', 'toto2', null, array());
         return $user;
     }
 
