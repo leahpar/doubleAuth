@@ -1,11 +1,5 @@
-# To get started with security, check out the documentation:
-# http://symfony.com/doc/current/book/security.html
 security:
-
-    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-#        service_user_provider:
-#            id: user_provider
         in_memory:
             memory:
                 users:
@@ -21,11 +15,11 @@ security:
         main:
             pattern:   ^/
             anonymous: true
+
+            # simple provider for testing
             provider:  in_memory
 
-#            form_login:
-#                login_path: login
-#                check_path: login_check
+            # The simple_form key has the same options as the normal form_login option, but with the additional authenticator key
             simple_form:
                 authenticator: double_password_authenticator
                 check_path:    login_check
@@ -35,10 +29,5 @@ security:
                 target: /
 
     encoders:
-#        AppBundle\Entity\User: plaintext
+        # Default user entity, plaintext for testing
         Symfony\Component\Security\Core\User\User: plaintext
-
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-
